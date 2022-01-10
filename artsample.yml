@@ -3,15 +3,15 @@ config:
   phases:
     - duration: 60
       arrivalRate: 20
-variables:
-  id:
-    - "1"
-    - "2"
-    - "3"
-    - "4"
+  variables:
+    id:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
 scenrios:
-  - name: "inline get request"
+  - name: ""
   - flow:
-   - get:
+    - get:
 	url: "/api/users/{{ id }}"
 	
