@@ -3,15 +3,9 @@ config:
   phases:
     - duration: 60
       arrivalRate: 20
-  variables:
-    id:
-      - "1"
-      - "2"
-      - "3"
-      - "4"
-scenrios:
-  - name: ""
+scenarios:
   - flow:
-    - get:
-	url: "/api/users/{{ id }}"
-	
+    - loop:
+      - get:
+          url: "/api/users/3"
+      count: 10 
